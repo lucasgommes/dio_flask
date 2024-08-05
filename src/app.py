@@ -74,4 +74,12 @@ def create_app(test_config=None):
     # Initializes the SQLAlchemy extension with the Flask application.
     db.init_app(app)
 
+
+    # Register Blueprint
+    from src.controllers import user, post
+
+    app.register_blueprint(user.app)
+    
+
+
     return app
