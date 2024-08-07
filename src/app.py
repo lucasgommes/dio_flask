@@ -79,6 +79,7 @@ def create_app(test_config=None):
     from src.controllers import user, post
 
     app.register_blueprint(user.app)
+    app.register_blueprint(post.bp)
     
 
 
